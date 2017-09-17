@@ -11,24 +11,24 @@ Data can be either a Element Id or an object.
 
 ###### Element
 
-<form id="form1">
-  <input id="input1">
-  <input id="input2">
-</form>
-<button onclick="httpResponse('form1','phpfile.php','erro1');">SEND</button>
-<div id="erro1"></div>
+&#60;form id="form1">
+  &#60;input id="input1">
+  &#60;input id="input2">
+&#60;/form>
+&#60;button onclick="httpResponse('form1','phpfile.php','erro1');">SEND&#60;/button>
+&#60;div id="erro1"></div>
 
-<?php
+&#60;?php
   echo $_POST['input1'];
   echo $_POST['input2'];
 ?>
 
 ###### Object
-
-var data = {str1: 'hello world', str2: 'hello world2'}
-httpResponse(data,'phpfile.php');
-
-<?php
+&#60;script>
+  var data = {str1: 'hello world', str2: 'hello world2'}
+  httpResponse(data,'phpfile.php');
+&#60;/script>
+&#60;?php
   echo $_POST['str1']; //hello world
   echo $_POST['str2']; //hello world2
 ?>
@@ -44,14 +44,14 @@ If there is no element or function it will automatically console.log() the respo
 
 ##### Element Id
 
-<form id="form1">
-  <input id="input1">
-  <input id="input2">
-</form>
-<button onclick="httpResponse('form1','phpfile.php','erro1');">SEND</button>
-<div id="erro1"></div>
+&#60;form id="form1">
+  &#60;input id="input1">
+  &#60;input id="input2">
+&#60;/form>
+&#60;button onclick="httpResponse('form1','phpfile.php','erro1');">SEND&#60;/button>
+&#60;div id="erro1">&#60;/div>
 
-<?php
+&#60;?php
   echo $_POST['input1']." - ".echo $_POST['input2'];
 ?>
 
@@ -59,8 +59,8 @@ Example: Form and Function
 
 ##### Object and Function
 
-<div id="data"></div>
-<script>
+&#60;div id="data">&#60;/div>
+&#60;script>
   function getData(str)
   {
     if(str == 'File Now Found')
@@ -73,9 +73,9 @@ Example: Form and Function
     }
   }
   httpResponse({action: 'getData',user: '19'},'phpfile.php',getData);
-</script>
+&#60;/script>
 
-<?php
+&#60;?php
   if($_POST['action'] == 'getData' && checkUser($_POST['user']) === true)
   {
     echo "Hello World"; exit();
