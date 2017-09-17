@@ -12,10 +12,15 @@ Data can be either a Element Id or an object.
 ###### Element
 
 &#60;form id="form1">
+
   &#60;input id="input1">
+  
   &#60;input id="input2">
+  
 &#60;/form>
+
 &#60;button onclick="httpResponse('form1','phpfile.php','erro1');">SEND&#60;/button>
+
 &#60;div id="erro1"></div>
 
 &#60;?php
