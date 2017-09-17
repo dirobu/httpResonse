@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="keyword" content="">
+<meta name="author" content="">
+<title>Test</title>
+<script src="httpResponse.min.js"></script>
+<style>
+</style>
+<script>
+function display(data)
+{
+	console.log(data);
+}
+</script>
+</head>
+<body class="text-center">
+<form id="form">
+	<input id="1"><br>
+	<input id="2"><br>
+	<textarea id="3"></textarea><br>
+	<select id="4"><option>1</option><option>2</option></select><br>
+</form>
+<hr>
+<p id="random_id"></p>
+<hr>
+<button onclick="httpResponse('form','fixtext.php');">Do Something</button>
+</body>
+</html>
